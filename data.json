@@ -1,0 +1,1303 @@
+[
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "product_name": "Levis jeans",
+    "category": "clothes",
+    "subcategory": "jeans",
+    "price": 1288,
+    "desc": "Levi Strauss & Co. (/╦êli╦Éva╔¬ ╦êstra╩ès/ LEE-vy STROWSS) is an American clothing company known worldwide for its Levi's (/╦êli╦Éva╔¬z/ LEE-vyze) brand of denim jeans. It was founded in May 1853[2] when German-Jewish immigrant Levi Strauss moved from New York City, New York, to San Francisco, California, to open a West Coast branch of his brothers' New York dry goods business.[3][4] Although the corporation is registered in Delaware,[5] the company's corporate headquarters is located in Levi's Plaza in",
+    "pub_date": "2026-08-02",
+    "image": "shop/images/jeans.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "product_name": "Lancer Shoes",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 2000,
+    "desc": "This is the best shoes in the market",
+    "pub_date": "2026-08-03",
+    "image": "shop/images/formal.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "product_name": "MI Phones 8GB RAM",
+    "category": "Smart Phones",
+    "subcategory": "Mobile",
+    "price": 30000,
+    "desc": "This is the best mobile under this price",
+    "pub_date": "2026-08-11",
+    "image": "shop/images/mi_phone.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "product_name": "Usha MIxer Grinder",
+    "category": "Electronic",
+    "subcategory": "MIxer",
+    "price": 2000,
+    "desc": "This is the best grinder in the market",
+    "pub_date": "2026-08-03",
+    "image": "shop/images/mixer.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "product_name": "iBALL 10000 MAH power Bank",
+    "category": "Electronic",
+    "subcategory": "Power Bank",
+    "price": 1000,
+    "desc": "This is the best powerbank in this price",
+    "pub_date": "2026-08-03",
+    "image": "shop/images/powerbank.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "product_name": "John Player tshirt(l/xl/xxl)",
+    "category": "Clothes",
+    "subcategory": "Tshirt",
+    "price": 400,
+    "desc": "This is the best tshirt under this price",
+    "pub_date": "2026-08-10",
+    "image": "shop/images/tshirt.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "product_name": "Titan Wrist watch",
+    "category": "watch",
+    "subcategory": "watch",
+    "price": 5000,
+    "desc": "This is the best wrist watch",
+    "pub_date": "2026-08-03",
+    "image": "shop/images/watch.webp"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "product_name": "q",
+    "category": "clothes",
+    "subcategory": "d",
+    "price": 20,
+    "desc": "ed",
+    "pub_date": "2026-08-17",
+    "image": "shop/images/hero2.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "product_name": "formal shoes",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 2000,
+    "desc": "This is the best shoes in the market",
+    "pub_date": "2026-08-04",
+    "image": "shop/images/formal.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "product_name": "Sports Shoes",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 1200,
+    "desc": "This is the best sport shoes in the market",
+    "pub_date": "2026-08-26",
+    "image": "shop/images/sports.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "product_name": "Nike",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 2000,
+    "desc": "This is the best nike shoes in the market",
+    "pub_date": "2026-08-04",
+    "image": "shop/images/nike.jfif"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "product_name": "Puma",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 2400,
+    "desc": "This is the best shoes in the market",
+    "pub_date": "2026-08-03",
+    "image": "shop/images/puma.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "product_name": "Adidas",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 1900,
+    "desc": "This is the best shoes un the market",
+    "pub_date": "2026-08-02",
+    "image": "shop/images/adidas.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 15,
+  "fields": {
+    "product_name": "Canvas",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 1200,
+    "desc": "This is the best canvas shoes in the market",
+    "pub_date": "2026-08-04",
+    "image": "shop/images/canvas.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 16,
+  "fields": {
+    "product_name": "Jordan",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 3000,
+    "desc": "This is the best shoes in the market",
+    "pub_date": "2026-08-31",
+    "image": "shop/images/jordan.jpg"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 17,
+  "fields": {
+    "product_name": "Cricket shoes",
+    "category": "shoes",
+    "subcategory": "shoes",
+    "price": 2000,
+    "desc": "This is the best cricket shoes in the market",
+    "pub_date": "2026-08-24",
+    "image": "shop/images/cricket.jpg"
+  }
+},
+{
+  "model": "shop.contact",
+  "pk": 1,
+  "fields": {
+    "name": "Rahul",
+    "email": "ra3621@gmail.com",
+    "phone": "85785974896",
+    "desc": "hlo"
+  }
+},
+{
+  "model": "shop.orders",
+  "pk": 14,
+  "fields": {
+    "items_json": "{\"pr7\":[1,\"Titan Wrist watch\",\"5000\"]}",
+    "amount": 5000,
+    "name": "wdew",
+    "email": "ra@gmail.com",
+    "address": "4refer w",
+    "city": "q",
+    "state": "q",
+    "zip_code": "q",
+    "phone": "q"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 1,
+  "fields": {
+    "order_id": 3,
+    "update_desc": "order has been arived and it is in jabalpur",
+    "timestamp": "2026-08-31"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 2,
+  "fields": {
+    "order_id": 4,
+    "update_desc": "The order has been in jabalpur",
+    "timestamp": "2026-08-31"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 3,
+  "fields": {
+    "order_id": 5,
+    "update_desc": "the order reached in your locstion",
+    "timestamp": "2026-08-31"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 4,
+  "fields": {
+    "order_id": 6,
+    "update_desc": "The order is reached in dehradun",
+    "timestamp": "2026-09-01"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 5,
+  "fields": {
+    "order_id": 7,
+    "update_desc": "The order has been reached in banglore",
+    "timestamp": "2026-09-01"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 6,
+  "fields": {
+    "order_id": 8,
+    "update_desc": "The order has been preached in delhi",
+    "timestamp": "2026-09-01"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 7,
+  "fields": {
+    "order_id": 9,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 8,
+  "fields": {
+    "order_id": 10,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 9,
+  "fields": {
+    "order_id": 11,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 10,
+  "fields": {
+    "order_id": 12,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 11,
+  "fields": {
+    "order_id": 13,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "shop.orderupdate",
+  "pk": 12,
+  "fields": {
+    "order_id": 14,
+    "update_desc": "The order has been placed",
+    "timestamp": "2026-09-02"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$oisJs68UZkVwvpBKOAL9PX$19bwLf4GR4WAwUEQ6dbymDyXwjY6TyfOxkWYGBaoHDw=",
+    "last_login": "2026-08-26T16:17:50.165Z",
+    "is_superuser": true,
+    "username": "rahul",
+    "first_name": "",
+    "last_name": "",
+    "email": "ra362176@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-02T09:00:17.160Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8hik0j3q20z11e8bjc1v90mky5ygchqc",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln2xp-Ykp4zWOvdDQ6gWMqnQtwdIqWA9s3Me6mM21rztsicR1ZnZdXpdytID5l2wHecbk1Tm9Z5LHpX9EEXfW0sz8vh_h1UXOq3xoGAsUfHxYsfgF1nQ3ARgEkopYROek9QuoimJyBjkrjOWySwHIN6fwADNDgl:1wqS44:M2h7A2fALY2KHSv6ZJoWzv7HX3ieaFcbAApnQJX1lX0",
+    "expire_date": "2026-08-16T09:01:00.473Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b9w4zzez11p9xyhrbgimikjhbsdxcphb",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln2xp-Ykp4zWOvdDQ6gWMqnQtwdIqWA9s3Me6mM21rztsicR1ZnZdXpdytID5l2wHecbk1Tm9Z5LHpX9EEXfW0sz8vh_h1UXOq3xoGAsUfHxYsfgF1nQ3ARgEkopYROek9QuoimJyBjkrjOWySwHIN6fwADNDgl:1wzGJy:bFuNgTEOMe9dOxUd9smDo5b1djgx0E_FKxAMUlgoOIA",
+    "expire_date": "2026-09-09T16:17:50.175Z"
+  }
+},
+{
+  "model": "blog.blogpost",
+  "pk": 1,
+  "fields": {
+    "title": "harry is a good boy",
+    "head0": "why he is a good boy",
+    "chead0": "reason to be a good oy",
+    "head1": "eferg",
+    "chead1": "gtrhyju",
+    "head2": "ergrthytj",
+    "chead2": "ryjtt",
+    "pub_date": "2026-09-09",
+    "thumbnail": "shop/images/jeans_gG1MTGc.webp"
+  }
+},
+{
+  "model": "blog.blogpost",
+  "pk": 2,
+  "fields": {
+    "title": "this is a blog section",
+    "head0": "it is not a common page",
+    "chead0": "This is very good",
+    "head1": "This page is very awesome",
+    "chead1": "not every words is wrong",
+    "head2": "all the memeber are here",
+    "chead2": "the blog is not understand",
+    "pub_date": "2026-09-08",
+    "thumbnail": "shop/images/228630.jpg"
+  }
+},
+{
+  "model": "blog.blogpost",
+  "pk": 3,
+  "fields": {
+    "title": "another one",
+    "head0": "vnfekvoeqrkm",
+    "chead0": "ofrehnfroif",
+    "head1": "ijnrefroq",
+    "chead1": "oirfjrnfr",
+    "head2": "roihfref",
+    "chead2": "rfnirf",
+    "pub_date": "2026-09-02",
+    "thumbnail": "shop/images/17061.jpg"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-08-02T09:04:12.296Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Product object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-08-02T09:05:44.225Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Product object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-08-03T09:36:54.115Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "clothes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-08-04T13:48:46.784Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Levis jeans",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product name\", \"Category\", \"Subcategory\", \"Price\", \"Desc\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-08-04T13:51:22.230Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Lancer Shoes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product name\", \"Category\", \"Subcategory\", \"Price\", \"Desc\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-08-04T13:55:54.423Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "MI Phones 8GB RAM",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product name\", \"Category\", \"Subcategory\", \"Price\", \"Desc\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-08-04T13:58:08.714Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "Usha MIxer Grinder",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-08-04T14:00:53.940Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "iBALL 10000 MAH power Bank",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-08-04T14:03:29.472Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "John Player tshirt(l/xl/xxl)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-04T14:04:30.131Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Titan Wrist watch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-28T12:33:30.464Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "q",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-29T08:10:24.534Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Lancer Shoes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-29T08:11:29.940Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "formla shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-29T08:14:28.227Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "formal shoes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product name\", \"Desc\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-29T08:17:49.273Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Sports Shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-29T08:21:18.443Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Running shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-29T08:22:43.246Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Sports Shoes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Subcategory\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-29T08:23:46.776Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "Nike",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-29T08:25:24.273Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Puma",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-29T08:26:26.784Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Adidas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-29T08:28:57.691Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Canvas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-29T08:29:48.705Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "Jordan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-08-29T08:30:35.513Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "Cricket shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-08-29T08:37:13.209Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Running shoes",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-08-30T08:55:14.253Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Levis jeans",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-08-31T17:29:39.072Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "1",
+    "object_repr": "order h...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-08-31T17:40:10.458Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "1",
+    "object_repr": "order h...",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-08-31T17:40:29.878Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "2",
+    "object_repr": "The ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-08-31T17:50:38.628Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "3",
+    "object_repr": "the ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-09-01T07:09:27.075Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "4",
+    "object_repr": "The ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-09-01T07:19:43.982Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "5",
+    "object_repr": "The ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-09-01T07:23:53.001Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "5",
+    "object_repr": "The ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-09-01T07:38:28.905Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orderupdate"
+    ],
+    "object_id": "6",
+    "object_repr": "The ord...",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Update desc\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-09-01T17:01:45.490Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "blog",
+      "blogpost"
+    ],
+    "object_id": "1",
+    "object_repr": "harry is a good boy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-09-02T08:57:30.413Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "blog",
+      "blogpost"
+    ],
+    "object_id": "2",
+    "object_repr": "this is a blog section",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-09-02T08:58:10.402Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "blog",
+      "blogpost"
+    ],
+    "object_id": "3",
+    "object_repr": "another one",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.687Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "13",
+    "object_repr": "Orders object (13)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.687Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "12",
+    "object_repr": "Orders object (12)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "11",
+    "object_repr": "Orders object (11)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "10",
+    "object_repr": "Orders object (10)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "9",
+    "object_repr": "Orders object (9)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "8",
+    "object_repr": "Orders object (8)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "7",
+    "object_repr": "Orders object (7)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "6",
+    "object_repr": "Orders object (6)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "5",
+    "object_repr": "Orders object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "4",
+    "object_repr": "Orders object (4)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "3",
+    "object_repr": "Orders object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "2",
+    "object_repr": "Orders object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-09-02T16:17:04.688Z",
+    "user": [
+      "rahul"
+    ],
+    "content_type": [
+      "shop",
+      "orders"
+    ],
+    "object_id": "1",
+    "object_repr": "Orders object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]
