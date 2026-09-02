@@ -1,0 +1,67 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}Payment Status{% endblock %}
+
+{% block body %}
+
+<div class="container my-5">
+
+    <div class="col-md-6 mx-auto">
+
+        <div class="card p-4 text-center">
+
+            {% if status == "Success" %}
+
+                <h2 class="text-success">
+                    ✅ Payment Successful
+                </h2>
+
+                <hr>
+
+                <h4>
+                    Order ID: {{ order.order_id }}
+                </h4>
+
+                <p>
+                    Payment ID: {{ payment_id }}
+                </p>
+
+                <p class="mt-3">
+                    Your order has been placed successfully.
+                </p>
+
+                <a href="/shop/" class="btn btn-primary">
+                    Continue Shopping
+                </a>
+
+            {% else %}
+
+                <h2 class="text-danger">
+                    ❌ Payment Failed
+                </h2>
+
+                <hr>
+
+                <p>
+                    Your payment could not be completed.
+                </p>
+
+                {% if error %}
+                    <p class="text-danger">
+                        {{ error }}
+                    </p>
+                {% endif %}
+
+                <a href="/shop/checkout/" class="btn btn-warning">
+                    Try Again
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

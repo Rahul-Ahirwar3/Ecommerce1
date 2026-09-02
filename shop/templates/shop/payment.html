@@ -1,0 +1,175 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}Payment{% endblock %}
+
+{% block body %}
+
+<div class="container my-5">
+
+    <div class="col-md-6 mx-auto">
+
+        <div class="card p-4 text-center">
+
+            <h2>Complete Your Payment</h2>
+
+            <hr>
+
+            <h4>Order ID: {{ order.order_id }}</h4>
+
+            <h3 class="my-3">
+                Amount: ₹{{ amount }}
+            </h3>
+
+            <button
+                id="rzp-button"
+                class="btn btn-success btn-lg">
+                Pay Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Razorpay Checkout Script -->
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+    var options = {
+
+        "key": "{{ razorpay_key_id }}",
+
+        "amount": "{{ payment.amount }}",
+
+        "currency": "INR",
+
+        "name": "My Awesome Cart",
+
+        "description": "Order Payment",
+
+        "order_id": "{{ payment.id }}",
+
+        "handler": function (response) {
+
+            var form = document.createElement("form");
+
+            form.method = "POST";
+            form.action = "{% url 'payment_success' %}";
+
+            var csrfToken = document.querySelector(
+                '[name=csrfmiddlewaretoken]'
+            ).value;
+
+
+            // Order ID
+
+            var orderInput = document.createElement("input");
+
+            orderInput.type = "hidden";
+
+            orderInput.name = "order_id";
+
+            orderInput.value = "{{ order.order_id }}";
+
+            form.appendChild(orderInput);
+
+
+            // Razorpay Payment ID
+
+            var paymentInput = document.createElement("input");
+
+            paymentInput.type = "hidden";
+
+            paymentInput.name = "razorpay_payment_id";
+
+            paymentInput.value = response.razorpay_payment_id;
+
+            form.appendChild(paymentInput);
+
+
+            // Razorpay Order ID
+
+            var orderIdInput = document.createElement("input");
+
+            orderIdInput.type = "hidden";
+
+            orderIdInput.name = "razorpay_order_id";
+
+            orderIdInput.value = response.razorpay_order_id;
+
+            form.appendChild(orderIdInput);
+
+
+            // Razorpay Signature
+
+            var signatureInput = document.createElement("input");
+
+            signatureInput.type = "hidden";
+
+            signatureInput.name = "razorpay_signature";
+
+            signatureInput.value = response.razorpay_signature;
+
+            form.appendChild(signatureInput);
+
+
+            // CSRF
+
+            var csrfInput = document.createElement("input");
+
+            csrfInput.type = "hidden";
+
+            csrfInput.name = "csrfmiddlewaretoken";
+
+            csrfInput.value = csrfToken;
+
+            form.appendChild(csrfInput);
+
+
+            document.body.appendChild(form);
+
+            form.submit();
+
+        },
+
+
+        "prefill": {
+
+            "name": "{{ order.name }}",
+
+            "email": "{{ order.email }}",
+
+            "contact": "{{ order.phone }}"
+
+        },
+
+
+        "theme": {
+
+            "color": "#3399cc"
+
+        }
+
+    };
+
+
+    var rzp1 = new Razorpay(options);
+
+
+    document.getElementById(
+        "rzp-button"
+    ).onclick = function(e) {
+
+        rzp1.open();
+
+        e.preventDefault();
+
+    };
+
+</script>
+
+{% endblock %}
