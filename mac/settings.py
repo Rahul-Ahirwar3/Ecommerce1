@@ -43,10 +43,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "blog",
-
-    # Cloudinary
-    "cloudinary_storage",
-    "cloudinary",
 ]
 
 
@@ -109,7 +105,7 @@ WSGI_APPLICATION = "mac.wsgi.application"
 
 
 # ==================================================
-# DATABASE - POSTGRESQL
+# DATABASE
 # ==================================================
 
 DATABASES = {
@@ -127,16 +123,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.MinimumLengthValidator"
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.CommonPasswordValidator"
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.NumericPasswordValidator"
     },
 ]
 
@@ -164,14 +164,12 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # ==================================================
-# CLOUDINARY
+# MEDIA FILES
 # ==================================================
 
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": os.environ.get("sawjjd7c"),
-    "API_KEY": os.environ.get("719847992856797"),
-    "API_SECRET": os.environ.get("-bNB-igkSAj4nCpoy5vYSU8X_4A"),
-}
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 # ==================================================
@@ -180,14 +178,16 @@ CLOUDINARY_STORAGE = {
 # ==================================================
 
 STORAGES = {
-    # Product images / uploaded media
+
+    # Normal Django media storage
     "default": {
-        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
 
-    # CSS / JS / Django Admin static files
+    # Static files
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND":
+        "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 
@@ -196,9 +196,9 @@ STORAGES = {
 # RAZORPAY
 # ==================================================
 
-RAZORPAY_KEY_ID = os.environ.get ('rzp_test_TXEA4Ihv3xGljN')
-RAZORPAY_KEY_SECRET = os.environ.get ('6bFSAGrsSkv5e0kS2czIIRZA')
+RAZORPAY_KEY_ID = os.environ.get("RAZORPAY_KEY_ID")
 
+RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET")
 
 
 # ==================================================
