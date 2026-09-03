@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 # ==================================================
@@ -28,12 +29,7 @@ class Product(models.Model):
 
     pub_date = models.DateField()
 
-    image = models.ImageField(
-        upload_to="shop/images/",
-        blank=True,
-        null=True
-    )
-
+    image = CloudinaryField("image", blank=True, null=True)
     def __str__(self):
         return self.product_name
 

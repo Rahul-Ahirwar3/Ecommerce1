@@ -1,6 +1,9 @@
+
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
+from dotenv import load_dotenv
 
 
 # ==================================================
@@ -8,6 +11,9 @@ import dj_database_url
 # ==================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / ".env")
 
 
 # ==================================================
@@ -43,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "blog",
+    "cloudinary",
 ]
 
 
@@ -164,6 +171,18 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # ==================================================
+# CLOUDINARY
+# ==================================================
+
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.environ.get("CLOUDINARY_API_KEY"),
+    api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
+    secure=True,
+)
+
+
+# ==================================================
 # MEDIA FILES
 # ==================================================
 
@@ -174,12 +193,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # ==================================================
 # STORAGE
-# Django 6+
 # ==================================================
 
 STORAGES = {
 
-    # Normal Django media storage
+    # Cloudinary is handled by CloudinaryField
+    # in shop/models.py
+
     "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
@@ -206,3 +226,4 @@ RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET")
 # ==================================================
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
