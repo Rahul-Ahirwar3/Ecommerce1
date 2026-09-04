@@ -1,3 +1,4 @@
+
 {% extends 'shop/basic.html' %}
 
 {% block css %}
@@ -5,16 +6,79 @@
 .col-md-3 {
     display: inline-block;
     margin-left: -4px;
+    vertical-align: top;
 }
+
+/* ==============================
+   FIXED SIZE PRODUCT CARD
+   ============================== */
+
+.product-card {
+    width: 260px !important;
+    height: 430px !important;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Fixed image size */
+.product-card .card-img-top {
+    width: 260px;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+/* Card body fixed */
+.product-card .card-body {
+    width: 100%;
+    height: 230px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Product name fixed height */
+.product-card .card-title {
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+/* Description fixed height */
+.product-card .card-text {
+    height: 55px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Price */
+.product-card .price-section {
+    margin-top: auto;
+    height: 25px;
+}
+
+/* Buttons */
+.product-card .product-buttons {
+    height: 45px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.product-card .product-buttons .btn {
+    font-size: 13px;
+    padding: 6px 9px;
+}
+
+/* Carousel */
 
 .carousel-indicators .active {
     background-color: blue;
-}
-
-.col-md-3 img {
-    width: 170px;
-    height: 200px;
-    object-fit: contain;
 }
 
 body .carousel-indicator li {
@@ -64,6 +128,7 @@ body .no-padding {
              data-ride="carousel">
 
             <!-- Indicators -->
+
             <ul class="carousel-indicators">
 
                 <li data-target="#demo{{forloop.counter}}"
@@ -92,67 +157,87 @@ body .no-padding {
 
                     <div class="col-xs-3 col-sm-3 col-md-3">
 
-                        <div class="card align-items-center"
-                             style="width: 18rem;">
+                        <!-- FIXED SIZE CARD -->
+
+                        <div class="card product-card">
 
                             <!-- PRODUCT IMAGE -->
 
                             {% if i.image %}
 
-                                <img src="{{ i.image.url }}"
-                                     class="card-img-top"
-                                     alt="{{ i.product_name }}">
+                            <img src="{{ i.image.url }}"
+                                 class="card-img-top"
+                                 alt="{{ i.product_name }}">
 
                             {% else %}
 
-                                <img src="{% static 'shop/images/default.jpg' %}"
-                                     class="card-img-top"
-                                     alt="No image">
+                            <img src="{% static 'shop/images/default.jpg' %}"
+                                 class="card-img-top"
+                                 alt="No image">
 
                             {% endif %}
 
 
+                            <!-- CARD BODY -->
+
                             <div class="card-body">
+
+                                <!-- PRODUCT NAME -->
 
                                 <h5 class="card-title"
                                     id="namepr{{i.id}}">
                                     {{i.product_name}}
                                 </h5>
 
+
+                                <!-- DESCRIPTION -->
+
                                 <p class="card-text">
                                     {{i.desc|slice:"0:53"}}...
                                 </p>
 
-                                <h6 class="card-title">
+
+                                <!-- PRICE -->
+
+                                <h6 class="card-title price-section">
+
                                     Price :
                                     <span id="pricepr{{i.id}}">
                                         {{i.price}}
                                     </span>
+
                                 </h6>
 
 
-                                <!-- CART BUTTON -->
+                                <!-- BUTTONS -->
 
-                                <span id="divpr{{i.id}}" class="divpr">
+                                <div class="product-buttons">
 
-                                    <button id="pr{{i.id}}"
-                                            class="btn btn-primary cart">
-                                        Add To Cart
-                                    </button>
+                                    <!-- CART BUTTON -->
 
-                                </span>
+                                    <span id="divpr{{i.id}}"
+                                          class="divpr">
+
+                                        <button id="pr{{i.id}}"
+                                                class="btn btn-primary cart">
+                                            Add To Cart
+                                        </button>
+
+                                    </span>
 
 
-                                <!-- QUICK VIEW -->
+                                    <!-- QUICK VIEW -->
 
-                                <a href="{% url 'ProductView' i.id %}">
+                                    <a href="{% url 'ProductView' i.id %}">
 
-                                    <button id="qv{{i.id}}"
-                                            class="btn btn-primary cart">
-                                        QuickView
-                                    </button>
+                                        <button id="qv{{i.id}}"
+                                                class="btn btn-primary">
+                                            QuickView
+                                        </button>
 
-                                </a>
+                                    </a>
+
+                                </div>
 
                             </div>
 
@@ -221,10 +306,13 @@ if (localStorage.getItem('cart') == null) {
     cart = JSON.parse(localStorage.getItem('cart'));
 
     updateCart(cart);
+
 }
 
 
-/* ADD TO CART */
+/* ==============================
+   ADD TO CART
+   ============================== */
 
 $('.divpr').on('click', 'button.cart', function() {
 
@@ -246,18 +334,18 @@ $('.divpr').on('click', 'button.cart', function() {
             'price' + idstr
         ).innerHTML;
 
-        cart[idstr] = [
-            qty,
-            name,
-            price
-        ];
+        cart[idstr] = [qty, name, price];
+
     }
 
     updateCart(cart);
+
 });
 
 
-/* CART POPOVER */
+/* ==============================
+   CART POPOVER
+   ============================== */
 
 $('#popcart').popover();
 
@@ -265,8 +353,6 @@ updatePopover(cart);
 
 
 function updatePopover(cart) {
-
-    console.log('We are inside updatePopover');
 
     var popStr = "";
 
@@ -278,8 +364,7 @@ function updatePopover(cart) {
 
     for (var item in cart) {
 
-        popStr +=
-            "<b>" + i + "</b>. ";
+        popStr += "<b>" + i + "</b>. ";
 
         popStr +=
             document.getElementById(
@@ -292,33 +377,40 @@ function updatePopover(cart) {
         i = i + 1;
     }
 
+
     popStr +=
         "</div>" +
+
         "<a href='/shop/checkout'>" +
+
         "<button class='btn btn-primary' id='checkout'>" +
         "Checkout" +
         "</button>" +
+
         "</a> " +
 
         "<button class='btn btn-primary' " +
         "onclick='clearCart()' " +
         "id='clearCart'>" +
+
         "Clear Cart" +
+
         "</button>";
 
-    console.log(popStr);
 
-    document.getElementById('popcart')
+    document
+        .getElementById('popcart')
         .setAttribute(
             'data-content',
             popStr
         );
 
-    {% comment %} $('#popcart').popover('show'); {% endcomment %}
 }
 
 
-/* CLEAR CART */
+/* ==============================
+   CLEAR CART
+   ============================== */
 
 function clearCart() {
 
@@ -331,22 +423,28 @@ function clearCart() {
         document.getElementById(
             'div' + item
         ).innerHTML =
+
             '<button id="' +
             item +
             '" class="btn btn-primary cart">' +
             'Add To Cart' +
             '</button>';
+
     }
+
 
     localStorage.clear();
 
     cart = {};
 
     updateCart(cart);
+
 }
 
 
-/* UPDATE CART */
+/* ==============================
+   UPDATE CART
+   ============================== */
 
 function updateCart(cart) {
 
@@ -359,6 +457,7 @@ function updateCart(cart) {
         document.getElementById(
             'div' + item
         ).innerHTML =
+
             "<button id='minus" +
             item +
             "' class='btn btn-primary minus'>-</button> " +
@@ -372,24 +471,29 @@ function updateCart(cart) {
             "<button id='plus" +
             item +
             "' class='btn btn-primary plus'>+</button>";
+
     }
+
 
     localStorage.setItem(
         'cart',
         JSON.stringify(cart)
     );
 
+
     document.getElementById(
         'cart'
     ).innerHTML = sum;
 
-    console.log(cart);
 
     updatePopover(cart);
+
 }
 
 
-/* MINUS */
+/* ==============================
+   MINUS
+   ============================== */
 
 $('.divpr').on(
     "click",
@@ -413,11 +517,14 @@ $('.divpr').on(
             cart['pr' + a][0];
 
         updateCart(cart);
+
     }
 );
 
 
-/* PLUS */
+/* ==============================
+   PLUS
+   ============================== */
 
 $('.divpr').on(
     "click",
@@ -435,9 +542,11 @@ $('.divpr').on(
             cart['pr' + a][0];
 
         updateCart(cart);
+
     }
 );
 
 </script>
 
 {% endblock %}
+
