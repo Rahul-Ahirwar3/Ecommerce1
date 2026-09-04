@@ -1,69 +1,453 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
 
-    <title>{% block title%} {% endblock %}</title>
-     <style>
-       {% block css %} {% endblock %}
-  </style>
-  </head>
-  <body>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/shop">My Awesome Cart</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <title>{% block title %}{% endblock %}</title>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/shop/about">About Us</a>
-      </li>
+    <style>
+        {% block css %}{% endblock %}
 
-      <li class="nav-item">
-        <a class="nav-link" href="/shop/tracker">Tracker</a>
-      </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/blog">Blog</a>
-       </li>
+        /* ================= FOOTER ================= */
 
-      <li class="nav-item">
-        <a class="nav-link" href="/shop/contact">Contact Us</a>
-      </li>
+        .site-footer {
+            background: #212529;
+            color: #ffffff;
+            margin-top: 60px;
+        }
+
+        .site-footer h5 {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .site-footer p {
+            color: #adb5bd;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 5px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #343a40;
+            color: #ffffff;
+            margin-right: 7px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: #007bff;
+            transform: translateY(-3px);
+        }
+
+        .footer-contact i {
+            width: 25px;
+            color: #007bff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #343a40;
+            padding: 18px 0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            color: #868e96;
+        }
+
+        /* ================= END FOOTER ================= */
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand font-weight-bold" href="/shop">
+        My Awesome Cart
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
 
 
-    </ul>
-    <form method='get' action='/shop/search/' class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name='search' id='search'>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/shop">
+                    Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/about">
+                    About Us
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/tracker">
+                    Tracker
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/blog">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/contact">
+                    Contact Us
+                </a>
+            </li>
+
+        </ul>
 
 
-  Cart(<span id="cart">0</span>)
-</button>
-  </div>
+        <!-- SEARCH -->
+
+        <form method="get"
+              action="/shop/search/"
+              class="form-inline my-2 my-lg-0">
+
+            <input class="form-control mr-sm-2"
+                   type="search"
+                   placeholder="Search"
+                   aria-label="Search"
+                   name="search"
+                   id="search">
+
+            <button class="btn btn-outline-success my-2 my-sm-0"
+                    type="submit">
+
+                Search
+
+            </button>
+
+        </form>
+
+
+        <!-- CART -->
+
+        <button type="button"
+                class="btn btn-secondary mx-2"
+                id="popcart"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-html="true"
+                data-content="Your cart is empty">
+
+            Cart(<span id="cart">0</span>)
+
+        </button>
+
+    </div>
+
 </nav>
-  {% block body %} {% endblock %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    {% block js %} {% endblock %}
-  </body>
+<!-- ================= END NAVBAR ================= -->
+
+
+<!-- ================= PAGE CONTENT ================= -->
+
+{% block body %}
+{% endblock %}
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <!-- BRAND / ABOUT -->
+
+            <div class="col-md-4 mb-4">
+
+                <h5>
+                    <i class="fas fa-shopping-cart mr-2"></i>
+                    My Awesome Cart
+                </h5>
+
+                <p>
+                    Welcome to My Awesome Cart. Shop your favorite
+                    products at the best prices with a simple,
+                    secure and convenient shopping experience.
+                </p>
+
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="footer-social mt-3">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-md-2 mb-4">
+
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="/shop">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/shop/about">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/shop/tracker">
+                            Order Tracker
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/blog">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/shop/contact">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CUSTOMER SERVICE -->
+
+            <div class="col-md-3 mb-4">
+
+                <h5>Customer Service</h5>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Return Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Shipping Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/shop/contact">
+                            Help & Support
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-md-3 mb-4">
+
+                <h5>Contact Us</h5>
+
+                <div class="footer-contact">
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        India
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        support@myawesomecart.com
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        +91 XXXXX XXXXX
+                    </p>
+
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        Mon - Sat: 9:00 AM - 6:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 text-center text-md-left">
+
+                    <p>
+                        © 2026 My Awesome Cart. All Rights Reserved.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-center text-md-right">
+
+                    <p>
+                        Secure Shopping &nbsp; • &nbsp;
+                        Fast Delivery &nbsp; • &nbsp;
+                        Trusted Service
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ================= END FOOTER ================= -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous">
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous">
+</script>
+
+
+{% block js %}
+{% endblock %}
+
+</body>
+
 </html>
+
